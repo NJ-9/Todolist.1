@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="todolist_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tache">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Nom_de_l_élément" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="Est_terminé" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="todolist_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tache" EntityType="Self.tache" />
+  </EntityContainer>
+</Schema>
